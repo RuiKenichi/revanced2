@@ -121,31 +121,3 @@ if [ -f "com.google.android.apps.youtube.music.apk" ]; then
 else
     echo "Cannot find YouTube Music APK, skipping build"
 fi
-
-echo "************************************"
-echo "Building TikTok APK"
-echo "************************************"
-
-if [ -f "com.zhiliaoapp.musically.apk" ]; then
-    echo "Building Non-root APK"
-    java -Xmx8192m -jar revanced-cli.jar -m revanced-integrations.apk -b revanced-patches.jar \
-        ${patches[@]} \
-        $EXPERIMENTAL \
-        -a com.zhiliaoapp.musically.apk -o build/revanced-tiktok.apk
-else
-    echo "Cannot find TikTok APK, skipping build"
-fi
-
-echo "************************************"
-echo "Building Twitch APK"
-echo "************************************"
-
-if [ -f "tv.twitch.android.app.apk" ]; then
-    echo "Building Non-root APK"
-    java -jar revanced-cli.jar -m revanced-integrations.apk -b revanced-patches.jar \
-        ${patches[@]} \
-        $EXPERIMENTAL \
-        -a tv.twitch.android.app.apk -o build/revanced-twitch.apk
-else
-    echo "Cannot find Twitch APK, skipping build"
-fi

@@ -18,3 +18,7 @@ By default this will build ReVanced with ALL available patches. Follow [this gui
 1. Go to Actions -> All workflows -> ReVanced Build ([Example](images/workflow_run.png))
 2. Run the `build` workflow (try to use `experimental_build` if the logs show not all patches applied correctly while revanced is not yet released)
 3. Download the APKs from the draft releases ([Example](images/build_release.png))
+
+## List of Available Patches
+
+Refer to Official ReVanced [list of available patches](https://github.com/revanced/revanced-patches#list-of-available-patches)

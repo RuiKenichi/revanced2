@@ -23,7 +23,7 @@ jobs:
         run: ./build_revanced.sh
 
       - name: Set current date as env variable
-        run: echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+        run: echo "date_now=$(date +'%A, %d %B %Y')" >> $GITHUB_ENV
 
       - uses: marvinpinto/action-automatic-releases@latest
         with:
