@@ -21,6 +21,14 @@ jobs:
       - name: Download APKs from APKMirror
         run: ./download_apkmirror.sh
 
+      - name : Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Release_latest
+          path: |
+            build/revanced-music.apk
+            build/revanced-youtube.apk
+      
       - name: Test Build APKs
         run: |
           ./build_revanced.sh
